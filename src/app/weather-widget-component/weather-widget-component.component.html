@@ -1,0 +1,29 @@
+<md-card class="weather-card">
+  <div class="weather-item">
+    <div class="weather-info">
+      <span class="temperature">
+        {{weather.temp}}
+        </span>
+      {{weather.loc}}
+    </div>
+  </div>
+  <div class="weather-item">
+    <weather-icon weathertype="{{weather.type}}"></weather-icon>
+  </div>
+  <div class="weather-item">
+    <div class="weather-info">
+      Sunrise
+      <span class="temperature">
+        {{weather.sunrise}}
+        </span>
+    </div>
+  </div>
+  <div class="weather-item">
+    <div class="weather-info">
+      Sunset
+      <span class="temperature">
+        {{weather.sunset}}
+        </span>
+    </div>
+  </div>
+</md-card>

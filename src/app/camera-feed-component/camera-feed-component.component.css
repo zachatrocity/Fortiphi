@@ -1,0 +1,58 @@
+.camera-container{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera-box{
+  width: 25%;
+}
+
+.camera-header-image {
+  background-size: cover;
+}
+
+.camera-card{
+    margin: 15px;
+    background-color: #455a64;
+}
+
+.camera-text{
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.status-icon{
+    display: inline-flex;
+    vertical-align: middle;
+    padding-bottom: 2px;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) { 
+    .camera-box{
+        width: 25%;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+    .camera-box{
+        width: 25%;
+    }        
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+    .camera-box{
+        width: 50%;
+    }    
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+    .camera-box{
+        width: 100%;
+    }
+}

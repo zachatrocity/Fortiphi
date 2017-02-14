@@ -1,0 +1,21 @@
+.weather-card{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-item{
+    align-self: center;
+    padding: 10px;
+}
+
+.temperature{
+    display: block;
+    font-size: 3em;
+}
+
+.weather-info {
+    display: inline-block;
+}
+

@@ -1,0 +1,42 @@
+<div class="camera-container">
+  <div class="camera-box" *ngFor="let cam of cameras" [style.order]="cam.gridpos">
+    <md-card class="camera-card">
+      <p>
+        <button class="camera-options-button" md-icon-button [mdMenuTriggerFor]="menu">
+          <md-icon>more_vert</md-icon>
+        </button>
+        <md-menu #menu="mdMenu">
+          <button md-menu-item>
+            <md-icon>camera</md-icon>
+            <span>Screenshot</span>
+          </button>
+          <button md-menu-item>
+            <md-icon>highlight</md-icon>
+            <span>Toggle IR</span>
+          </button>
+          <button md-menu-item (click)="moveLeft(cam.gridpos)">
+            <md-icon>chevron_left</md-icon>
+            <span>Move Left</span>
+          </button>
+          <button md-menu-item (click)="moveRight(cam.gridpos)">
+            <md-icon>chevron_right</md-icon>
+            <span>Move Right</span>
+          </button>
+        </md-menu>
+
+        <span class="camera-text">{{cam.text}} - 
+          <md-icon *ngIf="cam.status == true" class="status-icon" [style.color]="'#0BAC45'" 
+                   mdTooltip="Camera connected!" [mdTooltipPosition]="'above'">
+            check_circle
+          </md-icon>              
+          <md-icon *ngIf="cam.status == false" class="status-icon" [style.color]="'#EC334D'"
+                   mdTooltip="Camera disconnected!" [mdTooltipPosition]="'above'">
+            do_not_disturb
+          </md-icon>                          
+        </span>
+        
+      </p>
+      <img md-card-image src="{{cam.feed}}" alt="">
+    </md-card>
+  </div>
+</div>

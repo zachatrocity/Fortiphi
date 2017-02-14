@@ -1,0 +1,39 @@
+<div *ngIf="weathertype == 'Sun Showers'" class="icon sun-shower">
+  <div class="cloud"></div>
+  <div class="sun">
+    <div class="rays"></div>
+  </div>
+  <div class="rain"></div>
+</div>
+
+<div *ngIf="weathertype == 'Thunderstorm'" class="icon thunder-storm">
+  <div class="cloud"></div>
+  <div class="lightning">
+    <div class="bolt"></div>
+    <div class="bolt"></div>
+  </div>
+</div>
+
+<div *ngIf="weathertype == 'Cloudy'" class="icon cloudy">
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+</div>
+
+<div *ngIf="weathertype == 'Flurries'" class="icon flurries">
+  <div class="cloud"></div>
+  <div class="snow">
+    <div class="flake"></div>
+    <div class="flake"></div>
+  </div>
+</div>
+
+<div *ngIf="weathertype == 'Sunny'" class="icon sunny">
+  <div class="sun">
+    <div class="rays"></div>
+  </div>
+</div>
+
+<div *ngIf="weathertype == 'Rainy'" class="icon rainy">
+  <div class="cloud"></div>
+  <div class="rain"></div>
+</div>
