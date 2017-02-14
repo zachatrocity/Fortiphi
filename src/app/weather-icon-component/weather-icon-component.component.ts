@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './weather-icon-component.component.html',
   styleUrls: ['./weather-icon-component.component.css']
 })
-export class WeatherIconComponentComponent implements OnInit {
+export class WeatherIconComponent implements OnInit {
 
   constructor() { }
 

@@ -6,9 +6,10 @@ import {GeolocationService} from '../geolocation.service';
 @Component({
   selector: 'weather-widget',
   templateUrl: './weather-widget-component.component.html',
-  styleUrls: ['./weather-widget-component.component.css']
+  styleUrls: ['./weather-widget-component.component.css'],
+  providers: [WeatherService, GeolocationService]
 })
-export class WeatherWidgetComponentComponent implements OnInit {
+export class WeatherWidgetComponent implements OnInit {
 
   constructor(private weatherService: WeatherService, private geolocation: GeolocationService) { }
   

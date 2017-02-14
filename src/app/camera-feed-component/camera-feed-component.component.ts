@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './camera-feed-component.component.html',
   styleUrls: ['./camera-feed-component.component.css']
 })
-export class CameraFeedComponentComponent implements OnInit {
+export class CameraFeedComponent implements OnInit {
 
   constructor() { }
 
