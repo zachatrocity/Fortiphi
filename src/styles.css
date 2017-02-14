@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  transition: all 0.5s ease;
+}
+
+md-card>:not(md-card-content) img, md-card>img {
+  height: 50% !important;
+}

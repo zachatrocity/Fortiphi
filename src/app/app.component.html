@@ -1,3 +1,41 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+    <md-list>
+      Settings
+      <md-list-item> 
+        <button md-raised-button color="primary" [style.width]="'120px'">Camera</button>
+      </md-list-item>
+      <md-list-item> 
+        <button md-raised-button color="primary" [style.width]="'120px'">Notification</button>
+      </md-list-item>
+      <md-list-item> 
+        <button md-raised-button color="primary" [style.width]="'120px'">General</button>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+
+    Forti<span class="logo_accent">P</span>h<span class="logo_accent">i</span>
+
+    <span class="app-toolbar-filler"></span>
+    <!--<button md-button (click)="isDarkTheme = !isDarkTheme">DARK</button>-->
+  </md-toolbar>
+
+  <div class="app-content">
+
+    <camera-feed-component></camera-feed-component>
+
+    <weather-widget></weather-widget>
+    
+  </div>
+
+</md-sidenav-layout>
+
+<span class="app-action" [class.m2app-dark]="isDarkTheme">
+  <button md-fab (click)="openDialog()"><md-icon>more_vert</md-icon></button>
+</span>
