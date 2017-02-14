@@ -1,6 +1,19 @@
-# Fortipi
+# Fortiphi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.31.
+This is an Angular 2 front end for viewing raspberry pi camera streams. This is WIP
+
+
+### dashboard
+
+![dashboard](https://raw.githubusercontent.com/zachatrocity/Fortiphi/master/src/fortiphi.png)
+
+### Weather Widget
+
+![weather widget](https://raw.githubusercontent.com/zachatrocity/Fortiphi/master/src/weather-widget.png)
+
+## Libraries used
+[Angular Material 2](https://github.com/angular/material2)
+[Animated Weather Icons](https://codepen.io/joshbader/pen/EjXgqr)
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
