@@ -12,8 +12,9 @@ This is an Angular 2 front end for viewing raspberry pi camera streams. This is 
 ![weather widget](https://raw.githubusercontent.com/zachatrocity/Fortiphi/master/src/weather-widget.png)
 
 ## Todo
-* [ ] - Add loading... to weather widget
+* [x] - Add loading... to weather widget
 * [ ] - Ensure weather icons work for all types of weather
+* [x] - implement the move left/right camera menu item
 * [ ] - configure camera widgets to be a video stream
     * [videojs with contrib-hls](https://github.com/videojs/videojs-contrib-hls)
     * [jsmpeg](https://github.com/phoboslab/jsmpeg)

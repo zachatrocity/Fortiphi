@@ -1,4 +1,7 @@
 <md-card class="weather-card">
+  <div class="weather-item" [hidden]="weatherLoaded">
+    Loading Weather...
+  </div>
   <div class="weather-item">
     <div class="weather-info">
       <span class="temperature">
@@ -12,7 +15,7 @@
   </div>
   <div class="weather-item">
     <div class="weather-info">
-      Sunrise
+      <span *ngIf="weather.sunrise">Sunrise</span>
       <span class="temperature">
         {{weather.sunrise}}
         </span>
@@ -20,7 +23,7 @@
   </div>
   <div class="weather-item">
     <div class="weather-info">
-      Sunset
+      <span *ngIf="weather.sunset">Sunset</span>
       <span class="temperature">
         {{weather.sunset}}
         </span>

@@ -20,8 +20,9 @@ export class CameraFeedComponent implements OnInit {
     let indexTo: number;
 
     indexFrom = (this.cameras.findIndex(element => element.gridpos == gridindex));
+    indexTo = (this.cameras.findIndex(element => element.gridpos == gridindex - 1));
     this.cameras[indexFrom].gridpos = gridindex - 1;
-    this.cameras[indexFrom - 1].gridpos = gridindex;
+    this.cameras[indexTo].gridpos = gridindex;
   }
 
   moveRight(gridindex: number){
@@ -32,8 +33,9 @@ export class CameraFeedComponent implements OnInit {
     let indexTo: number;
 
     indexFrom = (this.cameras.findIndex(element => element.gridpos == gridindex));
+    indexTo = (this.cameras.findIndex(element => element.gridpos == gridindex + 1));
     this.cameras[indexFrom].gridpos = gridindex + 1;
-    this.cameras[indexFrom - 1].gridpos = gridindex;
+    this.cameras[indexTo].gridpos = gridindex;
   }
 
   cameras = [

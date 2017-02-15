@@ -14,6 +14,7 @@ export class WeatherWidgetComponent implements OnInit {
   constructor(private weatherService: WeatherService, private geolocation: GeolocationService) { }
   
   weather: Object = {};
+  weatherLoaded: boolean = false;
   location: any = '';
 
   ngOnInit() {
@@ -28,7 +29,7 @@ export class WeatherWidgetComponent implements OnInit {
   }
 
   getWeather(lat: Number, lng: Number): void {
-    this.weather = this.weatherService.getWeather(lat, lng).then(weather => this.weather = weather);
+    this.weatherService.getWeather(lat, lng).then(weather => { this.weather = weather; this.weatherLoaded = true; });
   }
 
 }
