@@ -6,7 +6,7 @@
           <md-icon>more_vert</md-icon>
         </button>
         <md-menu #menu="mdMenu">
-          <button md-menu-item>
+          <button md-menu-item (click)="getScreenshot(cam.feed)">
             <md-icon>camera</md-icon>
             <span>Screenshot</span>
           </button>
@@ -36,7 +36,7 @@
         </span>
         
       </p>
-      <img md-card-image src="{{cam.feed}}" alt="">
+      <img md-card-image src="{{cam.feed + 'video.mjpeg'}}" alt="">
     </md-card>
   </div>
 </div>
