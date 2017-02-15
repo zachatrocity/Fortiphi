@@ -39,21 +39,24 @@ export class CameraFeedComponent implements OnInit {
   }
 
   getScreenshot(url: string){
+    url.replace('video.mjpeg','');
     var win = window.open(url+'snapshot.jpeg?delay_s=0', '_blank');
     win.focus();
   }
 
+  feedError(event, camindex){
+    event.srcElement.src = 'assets/static.jpg'
+    this.cameras[camindex].status = false;
+  }
+
   cameras = [
-    //{text: 'Front Yard', status: true, feed: 'assets/frontyard.jpg', gridpos: 1},
-    //{text: 'Back Yard', status: true, feed: 'assets/backyard.jpg', gridpos: 2},
-    //{text: "Ben's Room", status: false, feed: 'assets/bensroom.jpg', gridpos: 3},
-    //{text: "Garage", status: false, feed: 'assets/bensroom.jpg', gridpos: 4},
-   // {text: "Master Bath", status: false, feed: 'assets/bensroom.jpg', gridpos: 5},
-    // {text: 'Kitchen', status:true, feed: 'assets/kitchen.jpg', gridpos: 6},
-    {text: 'Living Room', status:true, feed: 'http://192.168.0.107:9090/stream/', gridpos: 7},
-    {text: 'Living Room', status:true, feed: 'http://192.168.0.107:9090/stream/', gridpos: 7},
-    {text: 'Living Room', status:true, feed: 'http://192.168.0.107:9090/stream/', gridpos: 7},
-    {text: 'Living Room', status:true, feed: 'http://192.168.0.107:9090/stream/', gridpos: 7}
+    {text: 'Front Yard', status: true, feed: 'assets/frontyard.jpg', gridpos: 1},
+    {text: 'Back Yard', status: true, feed: 'assets/backyard.jpg', gridpos: 2},
+    {text: "Ben's Room", status: false, feed: 'assets/static.jpg', gridpos: 3},
+    {text: "Garage", status: false, feed: 'assets/static.jpg', gridpos: 4},
+    {text: "Master Bath", status: false, feed: 'assets/static.jpg', gridpos: 5},
+    {text: 'Kitchen', status:true, feed: 'assets/kitchen.jpg', gridpos: 6},
+    {text: 'Living Room', status:true, feed: 'http://192.168.0.107:9090/stream/video.mjpeg', gridpos: 7}
   ];
 
 }

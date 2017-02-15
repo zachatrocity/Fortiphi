@@ -1,5 +1,5 @@
 <div class="camera-container">
-  <div class="camera-box" *ngFor="let cam of cameras" [style.order]="cam.gridpos">
+  <div class="camera-box" *ngFor="let cam of cameras; let i = index;" [style.order]="cam.gridpos">
     <md-card class="camera-card">
       <p>
         <button class="camera-options-button" md-icon-button [mdMenuTriggerFor]="menu">
@@ -36,7 +36,7 @@
         </span>
         
       </p>
-      <img md-card-image src="{{cam.feed + 'video.mjpeg'}}" alt="">
+      <img md-card-image src="{{cam.feed}}" alt="" (error)="feedError($event, i)">
     </md-card>
   </div>
 </div>

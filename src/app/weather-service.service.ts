@@ -33,7 +33,7 @@ export class WeatherService {
                     sunrise: astro.sunrise,
                     sunset: astro.sunset
                  }
-                 console.log(response.json())
+                 
                  return weatherResponse;
                })
                .catch(this.handleError);
